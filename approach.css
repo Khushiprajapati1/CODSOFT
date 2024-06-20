@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    height: 90%;
+    width: 95%;
+    background-color: #3d0112;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main h1 {
+    text-align: center;
+    font-style: italic;
+    color: #fdf0d5;
+}
+
+.main .parts {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    animation: anim 2s ease-in-out forwards;
+
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.main .parts .part {
+    height: 100%;
+    width: 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.part h3 {
+    font-size: 3rem;
+    color: #fdf0d5;
+}
+
+.part .det {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdf0d5;
+    ;
+    gap: 5rem;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+}
+
+.part .links {
+    height: 80%;
+    width: 80%;
+    background-color: #fdf0d5;
+    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+.link {
+    height: 20%;
+    width: 10%;
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width:1024px) and (min-width:769px) {
+    .link {
+        width: 15%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:768px) and (min-width:426px) {
+    .part h3 {
+        font-size: 2rem;
+    }
+
+    .part .det {
+        font-size: 0.9rem;
+    }
+
+    .link {
+        width: 23%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:426px) and (min-width:320px) {
+    body {
+        background-color: #3d0112;
+    }
+
+    .parts {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .parts .part {
+        padding: 0.8rem;
+        gap: 0.5rem;
+
+    }
+
+    .part h3 {
+        font-size: 2rem;
+
+    }
+
+    .part .det {
+        gap: 1rem;
+
+    }
+
+    .part .det p {
+        font-size: 1rem
+    }
+
+    .links {
+        width: 100%;
+        padding: 0.1rem;
+        gap: 0.2rem;
+    }
+
+    .link {
+        height: 40%;
+        width: 100%;
+
+    }
+}

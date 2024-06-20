@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    height: 90%;
+    width: 95%;
+    background-color: #fdf0d5;
+    display: flex;
+}
+
+.part {
+    height: 100%;
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-left: 1px solid black;
+    animation: anim 2s ease-in-out forwards;
+
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.part h3 {
+    font-size: 2rem;
+}
+
+.part h6 {
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.jobs {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+
+}
+
+.job {
+    width: 80%;
+    height: 25%;
+    background-color: #00674F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.8rem;
+}
+
+.job h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.job button {
+    padding: 0.1rem 0.8rem;
+    font-size: 1.01rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    background-color: #fdf0d5;
+    letter-spacing: 0.06rem;
+}
+
+.box {
+    width: 80%;
+    height: 35%;
+    padding: 0rem 0.9rem;
+    background-color: #00674F;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.8rem;
+}
+
+.box .icon {
+    height: 40%;
+    width: 15%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.icon i {
+    font-size: 2rem;
+
+}
+
+.box h4 {
+    font-size: 1.2rem;
+}
+
+@media (max-width:1024px) and (min-width:769px) {
+    .part {
+        gap: 1rem;
+    }
+
+    .job h4 {
+        font-size: 1.2rem;
+    }
+
+    .job p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .icon i {
+        font-size: 1.3rem;
+    }
+
+    .box .icon {
+        height: 35%;
+    }
+
+    .box h4 {
+        font-size: 1rem;
+    }
+
+    .box p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
+@media (max-width:768px) and (min-width:426px) {
+    .part {
+        gap: 1rem;
+    }
+
+    .job h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .job p {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    .job button {
+        font-size: 0.8rem;
+    }
+
+    .icon i {
+        font-size: 1.3rem;
+    }
+
+    .box .icon {
+        height: 35%;
+        width: 20%;
+    }
+
+    .box h4 {
+        font-size: 0.7rem;
+    }
+
+    .box p {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+}
+
+@media (max-width:426px) and (min-width:320px) {
+    body {
+        background-color: #fdf0d5;
+    }
+
+    .main {
+        flex-direction: column;
+        gap: 8rem;
+    }
+
+    .part {
+        width: 100%;
+        height: 50%;
+        border: none;
+        gap: 0.5rem;
+    }
+
+    .part h3 {
+        font-size: 1.7rem;
+    }
+
+    .part h6 {
+        font-size: 1rem;
+    }
+
+    .jobs {
+        height: 95%;
+        width: 95%;
+    }
+
+    .job {
+        height: 50%;
+    }
+
+    .job h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .job p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .job button {
+        font-size: 0.8rem;
+    }
+
+    .box {
+        height: 50rem;
+    }
+
+    .box .icon {
+        display: none;
+    }
+
+    .box h4 {
+        font-size: 0.7rem;
+    }
+
+    .box p {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+}

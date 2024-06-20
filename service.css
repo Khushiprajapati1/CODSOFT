@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-color: #3d0112;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+
+.part {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.part .p1 {
+    height: 100%;
+    width: 25%;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.part .p1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.part .p2 {
+    height: 100%;
+    width: 70%;
+    background-color: antiquewhite;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
+    animation: anim 2s ease-in-out forwards;
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.part .p2 h4 {
+    font-size: 1.5rem;
+}
+
+@media (max-width:1024px) and (min-width:426px) {
+    .part .p2 {
+        gap: 1rem;
+    }
+}
+
+@media (max-width:426px) and (min-width:320px) {
+    .main {
+        height: 250vh;
+        gap: 2rem;
+    }
+
+    .part {
+        height: 50vh;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .part .p1 {
+        height: 50%;
+        width: 70%;
+    }
+
+    .part .p2 {
+        height: 50%;
+        width: 100%;
+        font-size: 0.5rem;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .part .p2 p {
+        font-size: 1rem;
+
+
+    }
+}
